@@ -23,7 +23,7 @@ import time
 #   NERV HQ - defm03 // github@defm03 // yutsuro@gmail.com   #
 
 class cmd_input(cmd.Cmd):
-  #local time - get h:min:sec
+  # local time - get h:min:sec
   localtime_h = time.localtime()[3]
   localtime_m = time.localtime()[4]
   localtime_s = time.localtime()[5]  
@@ -37,13 +37,5 @@ class cmd_input(cmd.Cmd):
     sys.exit("sayonara")
 
 if __name__ == '__main__':
-  #~localtime - notes /how to call ~#
-  #tm_year = str(time.localtime()[0])
-  #tm_mon  = str(time.localtime()[1])
-  #tm_mday = str(time.localtime()[2])
-  #tm_hour = str(time.localtime()[3])
-  #tm_min  = str(time.localtime()[4])
   cmd_input().cmdloop()
-  localtime_h = time.localtime()[3]
-  localtime_m = time.localtime()[4]
-  localtime_s = time.localtime()[5] 
+  #work on: how to update time
