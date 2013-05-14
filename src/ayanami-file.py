@@ -21,10 +21,12 @@ import time
 #                  \m___m__|_|    \m_m_|   \mm_|             #
 #                                                            #
 #   NERV HQ - defm03 // github@defm03 // yutsuro@gmail.com   #
-localtime_h = time.localtime()[3]
-localtime_m = time.localtime()[4]
-localtime_s = time.localtime()[5]
+
 class cmd_input(cmd.Cmd):
+  #local time - get h:min:sec
+  localtime_h = time.localtime()[3]
+  localtime_m = time.localtime()[4]
+  localtime_s = time.localtime()[5]  
   prompt = str(localtime_h)+':'+str(localtime_m)+':'+str(localtime_s)+' λ.春: '
   def do_sysinfo(self,line):
     print '[ ' + os.name + ' ' + sys.platform + ' ]'
@@ -41,7 +43,4 @@ if __name__ == '__main__':
   #tm_mday = str(time.localtime()[2])
   #tm_hour = str(time.localtime()[3])
   #tm_min  = str(time.localtime()[4])
-  localtime_h = time.localtime()[3]
-  localtime_m = time.localtime()[4]
-  localtime_s = time.localtime()[5]
   cmd_input().cmdloop()
