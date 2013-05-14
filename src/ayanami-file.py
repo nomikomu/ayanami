@@ -1,5 +1,5 @@
 import base64
-import os
+import os, os.path
 import sys
 import cmd
 
@@ -24,6 +24,8 @@ class cmd_input(cmd.Cmd):
     print os.name 
     print sys.platform
     print os.uname()
+  def do_count_files(self,line):
+    print len([name for name in os.listdir('.') if os.path.isfile(name)])
   def do_quit(self,line):
     sys.exit("sayonara")
 
