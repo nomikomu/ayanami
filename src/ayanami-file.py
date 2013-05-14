@@ -22,9 +22,9 @@ import time
 #                                                            #
 #   NERV HQ - defm03 // github@defm03 // yutsuro@gmail.com   #
 
-localtime = time.localtime(time.time())
 class cmd_input(cmd.Cmd):
-  prompt = str(localtime) + ' λ.春: '
+  prompt = '{tm_hour}:{tm_min}:{tm_sec}'.format(tm_hour= tm_hour, 
+      tm_min = tm_min, tm_sec = tm_sec) + ' λ.春: '
   def do_sysinfo(self,line):
     print '[ ' + os.name + ' ' + sys.platform + ' ]'
     print os.uname()
@@ -34,4 +34,5 @@ class cmd_input(cmd.Cmd):
     sys.exit("sayonara")
 
 if __name__ == '__main__':
+  localtime = time.localtime(time.time())
   cmd_input().cmdloop()
