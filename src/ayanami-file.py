@@ -44,3 +44,6 @@ if __name__ == '__main__':
   #tm_hour = str(time.localtime()[3])
   #tm_min  = str(time.localtime()[4])
   cmd_input().cmdloop()
+  localtime_h = time.localtime()[3]
+  localtime_m = time.localtime()[4]
+  localtime_s = time.localtime()[5] 
