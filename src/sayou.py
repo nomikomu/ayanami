@@ -22,12 +22,10 @@ import time
 #                                                            #
 #   NERV HQ - defm03 // github@defm03 // yutsuro@gmail.com   #
 
-animu = open("anime.txt","rw+")
-
-if os.path.exists("myfile.dat"):
-  f = file("myfile.dat", "r+")
+if os.path.exists("anime.txt"):
+  f = file("anime.txt", "r+")
 else:
-  f = file("myfile.dat", "w")
+  f = file("anime.txt", "w")
   
 class cmd_input(cmd.Cmd):
   # local time - get h:min:sec
