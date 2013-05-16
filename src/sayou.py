@@ -42,13 +42,14 @@ class cmd_input(cmd.Cmd):
   def do_quit(self,line):
     sys.exit("sayonara")
   def do_anime(self,line):
-    anime = "20 " + raw_input()
+	animu = open("foo.txt", "rw+")
+    animeT = "abc"
     animu.seek(0,2)
-    line = fo.write( anime )
+    line = fo.write( animeT )
     
     animu.seek(0,0)
     for index in range(20):
-      anime = animu.next()
+      animeT = animu.next()
       print "No %d | %s" % (index,line)
 
 if __name__ == '__main__':
