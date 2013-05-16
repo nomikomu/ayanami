@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-
+#!/usr/bin/python
 import base64
 import os, os.path
 import sys
@@ -24,6 +24,11 @@ import time
 
 animu = open("anime.txt","rw+")
 
+if os.path.exists("myfile.dat"):
+  f = file("myfile.dat", "r+")
+else:
+  f = file("myfile.dat", "w")
+  
 class cmd_input(cmd.Cmd):
   # local time - get h:min:sec
   localtime_h = time.localtime()[3]
