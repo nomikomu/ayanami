@@ -41,7 +41,7 @@ class cmd_input(cmd.Cmd):
     print len([name for name in os.listdir('.') if os.path.isfile(name)])
   def do_quit(self,line):
     sys.exit("sayonara")
-  def new_entr(self,line):
+  def do_anime(self,line):
     anime = "20 " + raw_input()
     animu.seek(0,2)
     line = fo.write( anime )
